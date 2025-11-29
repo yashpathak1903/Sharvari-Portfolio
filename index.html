@@ -1,0 +1,1819 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharvari Joshi – Interior Designer &amp; Stylist</title>
+  <meta name="description" content="Portfolio of Sharvari Joshi, an Interior Designer and Stylist from India specializing in residential, commercial, wellness, and styling projects.">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <!-- <script src="script.js"></script>-->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      box-sizing: border-box;
+      font-family: 'Lora', 'Georgia', serif;
+      background-color: #F7F5F2;
+      color: #2B2B2B;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    .sans {
+      font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(247, 245, 242, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(201, 191, 180, 0.2);
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: #2B2B2B;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #2B2B2B;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      transition: color 0.3s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links a:hover {
+      color: #B28A5A;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #EAE3DA 0%, #F7F5F2 100%);
+      margin-top: 70px;
+    }
+
+    .hero-content {
+      text-align: center;
+      padding: 4rem 2rem;
+      max-width: 900px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 2rem;
+      color: #2B2B2B;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-tagline {
+      font-size: 1.25rem;
+      color: #5A5A5A;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.3px;
+    }
+
+    /* Featured Projects */
+    .featured {
+      padding: 6rem 4rem;
+      background: #F7F5F2;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 3rem;
+      text-align: center;
+      letter-spacing: -0.3px;
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      position: relative;
+      aspect-ratio: 4/5;
+      background: #EAE3DA;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .project-card:hover .project-image {
+      transform: scale(1.05);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      background: linear-gradient(135deg, #C9BFB4 0%, #EAE3DA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .project-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem;
+      background: linear-gradient(to top, rgba(43, 43, 43, 0.9), transparent);
+      color: #F7F5F2;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-category {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #B28A5A;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* About Section */
+    .about {
+      padding: 6rem 4rem;
+      background: #FFFFFF;
+    }
+
+    .about-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-image {
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #C9BFB4 0%, #EAE3DA 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      letter-spacing: -0.3px;
+    }
+
+    .about-text p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #5A5A5A;
+      margin-bottom: 1.5rem;
+    }
+
+    .values {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .value-item {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #B28A5A;
+      letter-spacing: 0.5px;
+    }
+
+    /* Portfolio Grid */
+    .portfolio {
+      padding: 6rem 4rem;
+      background: #F7F5F2;
+    }
+
+    .filter-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.75rem 1.5rem;
+      background: transparent;
+      border: 1px solid #C9BFB4;
+      border-radius: 30px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #2B2B2B;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #B28A5A;
+      color: #F7F5F2;
+      border-color: #B28A5A;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .portfolio-card {
+      position: relative;
+      aspect-ratio: 1;
+      background: #EAE3DA;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .portfolio-card:hover .portfolio-image {
+      transform: scale(1.08);
+    }
+
+    .portfolio-image {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #C9BFB4 0%, #EAE3DA 100%);
+      transition: transform 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+
+    .portfolio-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1.5rem;
+      background: linear-gradient(to top, rgba(43, 43, 43, 0.95), transparent);
+      color: #F7F5F2;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .portfolio-card:hover .portfolio-info {
+      transform: translateY(0);
+    }
+
+    .portfolio-card-title {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .portfolio-teaser {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #C9BFB4;
+      line-height: 1.5;
+    }
+
+    /* Project Detail Page */
+    .project-detail {
+      padding: 6rem 4rem;
+      background: #FFFFFF;
+      margin-top: 70px;
+      display: none;
+    }
+
+    .project-detail.active {
+      display: block;
+    }
+
+    .project-header {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      text-align: center;
+    }
+
+    .project-detail-title {
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .project-detail-category {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: #B28A5A;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .project-hero-image {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto 4rem;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #C9BFB4 0%, #EAE3DA 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+    }
+
+    .project-concept {
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      padding: 3rem;
+      background: #F7F5F2;
+      border-radius: 4px;
+    }
+
+    .project-concept h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      color: #B28A5A;
+    }
+
+    .project-concept p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #5A5A5A;
+    }
+
+    .project-gallery {
+      max-width: 1400px;
+      margin: 0 auto 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+
+    .gallery-image {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #C9BFB4 0%, #EAE3DA 100%);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .gallery-image:hover {
+      transform: scale(1.02);
+    }
+
+    .project-materials {
+      max-width: 1200px;
+      margin: 0 auto 4rem;
+      padding: 3rem;
+      background: #F7F5F2;
+      border-radius: 4px;
+    }
+
+    .project-materials h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .materials-strip {
+      display: flex;
+      gap: 2rem;
+      overflow-x: auto;
+      padding: 1rem 0;
+    }
+
+    .material-swatch {
+      min-width: 150px;
+      text-align: center;
+    }
+
+    .swatch {
+      width: 150px;
+      height: 150px;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #C9BFB4 0%, #EAE3DA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+
+    .material-caption {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #5A5A5A;
+    }
+
+    .project-reflection {
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      padding: 3rem;
+      background: #FFFFFF;
+      border-left: 3px solid #B28A5A;
+    }
+
+    .project-reflection h3 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-reflection p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #5A5A5A;
+      font-style: italic;
+    }
+
+    .project-nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 3rem;
+      border-top: 1px solid #C9BFB4;
+    }
+
+    .nav-btn {
+      padding: 1rem 2rem;
+      background: #B28A5A;
+      color: #F7F5F2;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .nav-btn:hover {
+      background: #9A7449;
+    }
+    
+    /* Journal Section */
+    .journal {
+      padding: 6rem 4rem;
+      background: #EAE3DA;
+    }
+
+    .journal-description {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      color: #5A5A5A;
+      line-height: 1.8;
+    }
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .journal-card {
+      background: #F7F5F2;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .journal-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 24px rgba(43, 43, 43, 0.08);
+    }
+
+    .journal-icon {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #C9BFB4 0%, #EAE3DA 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+
+    .journal-content {
+      padding: 2rem;
+    }
+
+    .journal-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #B28A5A;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .journal-card-title {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      color: #2B2B2B;
+      letter-spacing: -0.3px;
+    }
+
+    .journal-excerpt {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #5A5A5A;
+    }
+
+    /* Journal Article Page */
+    .journal-article {
+      padding: 6rem 4rem;
+      background: #FFFFFF;
+      margin-top: 70px;
+      display: none;
+    }
+
+    .journal-article.active {
+      display: block;
+    }
+
+    .article-header {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .article-title {
+      font-size: 3rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+      color: #2B2B2B;
+    }
+
+    .article-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: #B28A5A;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .article-hero-icon {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto 4rem;
+      aspect-ratio: 21/9;
+      background: linear-gradient(135deg, #EAE3DA 0%, #F7F5F2 100%);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6rem;
+    }
+
+    .article-body {
+      max-width: 700px;
+      margin: 0 auto 3rem;
+    }
+
+    .article-body p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: #5A5A5A;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-closing {
+      max-width: 700px;
+      margin: 0 auto 4rem;
+      padding: 2rem 0;
+      border-top: 1px solid #C9BFB4;
+      border-bottom: 1px solid #C9BFB4;
+    }
+
+    .article-closing p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #2B2B2B;
+      font-style: italic;
+      text-align: center;
+    }
+
+.article-nav {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ---------------- JOURNAL DETAIL (MATCH PROJECT DETAIL STYLE) ---------------- */
+
+#journal-detail {
+  display: none;
+  padding: 6rem 4rem;
+  background: #FFFFFF;
+}
+
+#journal-detail.active {
+  display: block;
+}
+
+.journal-detail-content {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  padding: 3rem 3rem 4rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.journal-detail-icon {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+#journal-detail-title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #2B2B2B;
+}
+
+#journal-detail-date {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #B28A5A;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.journal-detail-body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.journal-detail-body p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5A5A5A;
+  margin-bottom: 1.4rem;
+}
+
+#journal-detail-closing {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+  text-align: center;
+  font-style: italic;
+  color: #2B2B2B;
+  opacity: 0.9;
+}
+
+.close-detail {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: block;
+  margin-left: auto;
+  color: #5A5A5A;
+  transition: 0.2s ease;
+}
+
+.close-detail:hover {
+  color: #2B2B2B;
+}
+#journal {
+  scroll-margin-top: 100px; /* adjust based on your navbar height */
+}
+    /* Contact Section */
+    .contact {
+      padding: 6rem 4rem;
+      background: #EAE3DA;
+    }
+
+    .contact-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.3px;
+    }
+
+    .contact-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      color: #5A5A5A;
+      margin-bottom: 3rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .form-group label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #2B2B2B;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.3px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 1rem;
+      border: 1px solid #C9BFB4;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      background: #F7F5F2;
+      color: #2B2B2B;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #B28A5A;
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      padding: 1.25rem 3rem;
+      background: #B28A5A;
+      color: #F7F5F2;
+      border: none;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    .submit-btn:hover {
+      background: #9A7449;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-links a {
+      font-family: 'Inter', sans-serif;
+      color: #2B2B2B;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .contact-links a:hover {
+      color: #B28A5A;
+    }
+
+    /* Footer */
+    footer {
+      padding: 3rem 4rem;
+      background: #2B2B2B;
+      color: #C9BFB4;
+      text-align: center;
+    }
+
+    footer p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .studio-credit {
+      font-size: 0.85rem;
+      color: #B28A5A;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 1rem 2rem;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .nav-links {
+        gap: 1.5rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-tagline {
+        font-size: 1.1rem;
+      }
+
+      .featured,
+      .about,
+      .portfolio,
+      .contact {
+        padding: 4rem 2rem;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .featured-grid,
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-buttons {
+        gap: 1rem;
+      }
+
+      .project-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .materials-strip {
+        gap: 1rem;
+      }
+
+      .project-nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body><!-- Navigation -->
+  <nav>
+   <div class="logo">
+    Sharvari Joshi
+   </div>
+   <ul class="nav-links">
+    <li><a href="#home" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+    <li><a href="#journal" class="nav-link">Journal</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+   </ul>
+  </nav><!-- Main Content -->
+  <div id="main-content"><!-- Hero Section -->
+   <section id="home" class="hero">
+    <div class="hero-content">
+     <h1>Sharvari Joshi</h1>
+     <p class="hero-tagline" id="hero-tagline">Designing spaces that breathe harmony and meaning.</p>
+    </div>
+   </section><!-- Featured Projects Section -->
+<section class="featured" id="featured">
+  
+  <!-- Section Heading -->
+  <h2 class="section-title">Featured Work</h2>
+
+  <!-- Featured Projects Grid -->
+  <div class="featured-grid">
+    
+    <!-- Project 1: Samanvay Wellness Retreat -->
+    <div class="project-card" data-project="samanvay">
+      <div class="project-image">
+        <img src="images/Samanway_lobby.png" alt="Samanvay Wellness Retreat">
+      </div>
+      <div class="project-overlay">
+        <h3 class="project-title">Samanvay Wellness Retreat</h3>
+        <p class="project-category">Wellness & Retreats</p>
+      </div>
+    </div>
+
+    <!-- Project 2: Urban Nest Residence -->
+    <div class="project-card" data-project="urban-nest">
+      <div class="project-image">
+        <img src="images/urbannesthero.jpg" alt="urban nest Project">
+      </div>
+      <div class="project-overlay">
+        <h3 class="project-title">Urban Nest Residence</h3>
+        <p class="project-category">Residential</p>
+      </div>
+    </div>
+
+    <!-- Project 3: Ara Teahouse -->
+    <div class="project-card" data-project="artisan-cafe">
+      <div class="project-image">
+        <img src="images/ara logo.png" alt="Artisan Café & Gallery">
+      </div>
+      <div class="project-overlay">
+        <h3 class="project-title">Ara Teahouse</h3>
+        <p class="project-category">Commercial & Events</p>
+      </div>
+    </div>
+
+    <!-- Project 4: Textile Heritage Showcase -->
+    <div class="project-card" data-project="textile-showcase">
+      <div class="project-image">
+        🎨
+      </div>
+      <div class="project-overlay">
+        <h3 class="project-title">Textile Heritage Showcase</h3>
+        <p class="project-category">Styling & Visual Merchandising</p>
+      </div>
+    </div>
+
+  </div><!-- End featured-grid -->
+
+</section><!-- End Featured Section -->
+
+
+   </section><!-- About Section -->
+   <section id="about" class="about">
+    <div class="about-content">
+     <div class="about-image">
+      👤
+     </div>
+     <div class="about-text">
+      <h2>About</h2>
+      <p id="about-bio">Sharvari Joshi is an Interior Designer and Stylist based in India, with a practice rooted in mindful design and contextual storytelling. Her work explores the intersection of materiality, human experience, and cultural context—creating spaces that feel both timeless and deeply personal.</p>
+      <p>With a background in architecture and a passion for sensory design, Sharvari approaches each project as a narrative, weaving together natural textures, light, and form to craft environments that resonate with their inhabitants.</p>
+      <div class="values"><span class="value-item">Context</span> <span class="value-item">·</span> <span class="value-item">Materiality</span> <span class="value-item">·</span> <span class="value-item">Human Experience</span>
+      </div>
+     </div>
+    </div>
+   </section><!-- Portfolio Section -->
+   <section id="portfolio" class="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="filter-buttons"><button class="filter-btn active" data-filter="all">All Projects</button> <button class="filter-btn" data-filter="residential">Residential</button> <button class="filter-btn" data-filter="commercial">Commercial &amp; Events</button> <button class="filter-btn" data-filter="wellness">Wellness &amp; Retreats</button> <button class="filter-btn" data-filter="styling">Styling &amp; Visual Merchandising</button>
+    </div>
+    <div class="portfolio-grid">
+     <div class="portfolio-card" data-category="wellness" data-project="samanvay">
+<div class="portfolio-image">
+    <img src="images/Samanway_lobby.png" alt="Samanvay Project">
+</div>
+      <div class="portfolio-info">
+       <h3 class="portfolio-card-title">Samanvay Wellness Retreat</h3>
+       <p class="portfolio-category">Wellness &amp; Retreats</p>
+       <p class="portfolio-teaser">A serene sanctuary designed for mindfulness and restoration</p>
+      </div>
+      <img src="images/Samanway_lobby.png" alt="Samanvay Project">
+
+     </div>
+     <div class="portfolio-card" data-category="residential" data-project="urban-nest">
+      <div class="portfolio-image">
+       <img src="images/urbannesthero.jpg" alt="urban nest Project">
+      </div>
+      <div class="portfolio-info">
+       <h3 class="portfolio-card-title">Urban Nest Residence</h3>
+       <p class="portfolio-category">Residential</p>
+       <p class="portfolio-teaser">Contemporary living space balancing warmth and minimalism</p>
+      </div>
+     </div>
+     <div class="portfolio-card" data-category="commercial" data-project="artisan-cafe">
+      <div class="portfolio-image">
+       <img src="images/ara logo.png" alt="Ara Project">
+      </div>
+      <div class="portfolio-info">
+       <h3 class="portfolio-card-title">Ara Teahouse</h3>
+       <p class="portfolio-category">Commercial &amp; Events</p>
+       <p class="portfolio-teaser">A cultural hub celebrating craft and community</p>
+      </div>
+     </div>
+     <div class="portfolio-card" data-category="styling" data-project="textile-showcase">
+      <div class="portfolio-image">
+       🎨
+      </div>
+      <div class="portfolio-info">
+       <h3 class="portfolio-card-title">Textile Heritage Showcase</h3>
+       <p class="portfolio-category">Styling &amp; Visual Merchandising</p>
+       <p class="portfolio-teaser">Visual storytelling through traditional Indian textiles</p>
+      </div>
+     </div>
+     <div class="portfolio-card" data-category="residential" data-project="coastal-villa">
+      <div class="portfolio-image">
+       🌊
+      </div>
+      <div class="portfolio-info">
+       <h3 class="portfolio-card-title">Coastal Villa</h3>
+       <p class="portfolio-category">Residential</p>
+       <p class="portfolio-teaser">Breezy interiors inspired by the sea and sky</p>
+      </div>
+     </div>
+     <div class="portfolio-card" data-category="wellness" data-project="yoga-studio">
+      <div class="portfolio-image">
+       🧘
+      </div>
+      <div class="portfolio-info">
+       <h3 class="portfolio-card-title">Tranquil Yoga Studio</h3>
+       <p class="portfolio-category">Wellness &amp; Retreats</p>
+       <p class="portfolio-teaser">A meditative space for practice and reflection</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   </section><!-- Portfolio Section -->
+
+<!-- Journal Section -->
+<section id="journal" class="journal">
+  <h2 class="section-title">🪷 Journal</h2>
+  <p class="journal-description">
+    Thoughts, observations, and essays on design, materiality, and human experience.
+  </p>
+
+  <div class="journal-grid">
+
+    <!-- Cards (auto open details) -->
+    <div class="journal-card" data-article="wellbeing">
+      <div class="journal-icon">🪷</div>
+      <div class="journal-content">
+        <p class="journal-date">January 2024</p>
+        <h3 class="journal-card-title">Designing for Well-being</h3>
+        <p class="journal-excerpt">Spaces that support mental clarity and calm.</p>
+      </div>
+    </div>
+
+    <div class="journal-card" data-article="light">
+      <div class="journal-icon">💡</div>
+      <div class="journal-content">
+        <p class="journal-date">February 2024</p>
+        <h3 class="journal-card-title">The Language of Light</h3>
+        <p class="journal-excerpt">How natural light shapes emotion and atmosphere.</p>
+      </div>
+    </div>
+
+    <div class="journal-card" data-article="materiality">
+      <div class="journal-icon">📜</div>
+      <div class="journal-content">
+        <p class="journal-date">March 2024</p>
+        <h3 class="journal-card-title">On Materiality and Memory</h3>
+        <p class="journal-excerpt">Textures that hold stories.</p>
+      </div>
+    </div>
+
+    <div class="journal-card" data-article="making">
+      <div class="journal-icon">🔨</div>
+      <div class="journal-content">
+        <p class="journal-date">April 2024</p>
+        <h3 class="journal-card-title">The Beauty of Making</h3>
+        <p class="journal-excerpt">A meditation on craft and process.</p>
+      </div>
+    </div>
+
+    <div class="journal-card" data-article="homes">
+      <div class="journal-icon">🌤</div>
+      <div class="journal-content">
+        <p class="journal-date">May 2024</p>
+        <h3 class="journal-card-title">Homes that Heal</h3>
+        <p class="journal-excerpt">Homes that nurture belonging.</p>
+      </div>
+    </div>
+
+    <div class="journal-card" data-article="future">
+      <div class="journal-icon">🌍</div>
+      <div class="journal-content">
+        <p class="journal-date">June 2024</p>
+        <h3 class="journal-card-title">The Future Feels Human Again</h3>
+        <p class="journal-excerpt">The rise of empathy-driven design.</p>
+      </div>
+    </div>
+
+    <div class="journal-card" data-article="structure">
+      <div class="journal-icon">🪵</div>
+      <div class="journal-content">
+        <p class="journal-date">July 2024</p>
+        <h3 class="journal-card-title">Learning from Structure</h3>
+        <p class="journal-excerpt">Form, proportion, and joinery.</p>
+      </div>
+    </div>
+
+    <div class="journal-card" data-article="storytelling">
+      <div class="journal-icon">💍</div>
+      <div class="journal-content">
+        <p class="journal-date">August 2024</p>
+        <h3 class="journal-card-title">Visual Storytelling</h3>
+        <p class="journal-excerpt">How design communicates emotion.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- END Journal Section -->
+
+<!-- Journal Detail (Project-style) -->
+<section id="journal-detail" class="journal-detail">
+  <button id="close-journal-detail" class="close-detail">✕</button>
+
+  <div class="journal-detail-content">
+    <div id="journal-detail-icon" class="journal-detail-icon"></div>
+    <h2 id="journal-detail-title"></h2>
+    <p id="journal-detail-date" class="journal-detail-date"></p>
+
+    <div id="journal-detail-body" class="journal-detail-body"></div>
+
+    <p id="journal-detail-closing" class="journal-detail-closing"></p>
+  </div>
+</section>
+
+   <!-- Contact Section -->
+   <section id="contact" class="contact">
+    <div class="contact-content">
+     <h2>Get in Touch</h2>
+     <p class="contact-cta" id="contact-cta">Let's design something meaningful.</p>
+     <form class="contact-form" id="contact-form">
+      <div class="form-group"><label for="name">Name</label> <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group"><label for="email">Email</label> <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group"><label for="message">Message</label> <textarea id="message" name="message" required></textarea>
+      </div><button type="submit" class="submit-btn">Send Message</button>
+     </form>
+     <div class="contact-links"><a href="mailto:noctiscreates@gmail.com" id="email-link" target="_blank" rel="noopener noreferrer">Email</a> <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer">Behance</a> <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+     </div>
+    </div>
+   </section>
+  </div><!-- Project Detail Page (Hidden by default) -->
+<div id="project-detail" class="project-detail">
+  
+  <!-- HEADER -->
+  <div class="project-header">
+    <h1 class="project-detail-title" id="detail-title"></h1>
+    <p class="project-detail-category" id="detail-category"></p>
+  </div>
+
+  <!-- HERO IMAGE -->
+  <div class="project-hero-image" id="detail-hero"></div>
+
+  <!-- CONCEPT -->
+  <div class="project-concept">
+    <h3>Concept</h3>
+    <p id="detail-concept"></p>
+  </div>
+
+  <!-- GALLERY IMAGES (DYNAMIC – DO NOT HARD-CODE) -->
+  <div class="project-gallery" id="detail-gallery"></div>
+
+  <!-- MATERIALS -->
+  <div class="project-materials">
+    <h3>Materials &amp; Moodboard</h3>
+    <div class="materials-strip">
+
+      <div class="material-swatch">
+        <img src="images/material_wood.jpg" class="swatch" />
+        <p class="material-caption">Natural Oak</p>
+      </div>
+
+      <div class="material-swatch">
+        <img src="images/material_plaster.jpg" class="swatch" />
+        <p class="material-caption">Limewash Plaster</p>
+      </div>
+
+      <div class="material-swatch">
+        <img src="images/material_textile.jpg" class="swatch" />
+        <p class="material-caption">Jute Textiles</p>
+      </div>
+
+      <div class="material-swatch">
+        <img src="images/material_brass.jpg" class="swatch" />
+        <p class="material-caption">Brass Accents</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- REFLECTION -->
+  <div class="project-reflection">
+    <h3>Reflection</h3>
+    <p id="detail-reflection"></p>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="project-nav">
+    <button class="nav-btn" id="back-to-portfolio">← Back to Portfolio</button>
+    <button class="nav-btn" id="next-project">Next Project →</button>
+  </div>
+
+</div>
+
+
+  </div><!-- Footer -->
+  <footer>
+   <p>© 2024 Sharvari Joshi. All rights reserved.</p>
+   <p class="studio-credit">Studio: Sketch and Spaces</p>
+  </footer>
+  <script>
+/* -------------------- DEFAULT CONFIG -------------------- */
+const defaultConfig = {
+  hero_tagline: "Designing spaces that breathe harmony and meaning.",
+  about_bio:
+    "Sharvari Joshi is an Interior Designer and Stylist based in India, with a practice rooted in mindful design and contextual storytelling. Her work explores the intersection of materiality, human experience, and cultural context—creating spaces that feel both timeless and deeply personal.",
+  contact_cta: "Let's design something meaningful.",
+  contact_email: "noctiscreates@gmail.com",
+  background_color: "#F7F5F2",
+  surface_color: "#EAE3DA",
+  text_color: "#2B2B2B",
+  primary_action_color: "#B28A5A",
+  secondary_action_color: "#9A7449",
+  font_family: "Lora",
+  font_size: 16
+};
+
+let config = { ...defaultConfig };
+
+/* -------------------- JOURNAL DATA -------------------- */
+const journalData = {
+  wellbeing: {
+    title: "Designing for Well-being",
+    date: "January 2024",
+    icon: "🪷",
+    body: [
+      "Well-being in design isn't about adding more—it's about creating space for what matters. It's the quality of light that enters a room at dawn, the texture of a surface beneath your hand, the rhythm of a space that allows you to breathe.",
+      "When we design for mental clarity, we're really designing for simplicity. Not the cold minimalism of empty rooms, but the warm simplicity of thoughtful curation. Every element earns its place by serving the life unfolding within.",
+      "Emotional balance comes from contrast—the interplay of light and shadow, the dialogue between solid and void, the dance of texture and smoothness. These aren't just aesthetic choices; they're the language through which spaces speak to our nervous systems.",
+      "Comfort, true comfort, is more than physical softness. It's the feeling of being held by a space, of belonging within it. It's knowing where to rest your eyes, where to let your mind wander, where to simply be."
+    ],
+    closing:
+      '"A calm space doesn\'t need to be silent — it just needs to feel alive in a quiet way."'
+  },
+
+  light: {
+    title: "The Language of Light",
+    date: "February 2024",
+    icon: "💡",
+    body: [
+      "Light is the first thing we notice when we enter a space, yet it's often the last thing we consciously consider. It shapes our perception of time, our emotional state, our very sense of being present.",
+      "Natural light carries the rhythm of the day within it. Morning light is hopeful, full of potential. Afternoon light is steady, grounding. Evening light is reflective, gentle. When we design with this rhythm in mind, we're not just illuminating spaces—we're choreographing experiences.",
+      "The quality of light matters as much as its quantity. Harsh light flattens and exhausts. Soft, diffused light embraces and soothes. Dappled light through leaves or screens creates a sense of shelter while maintaining connection to the outside world.",
+      "Shadow is light's essential partner. Without shadow, there is no depth, no mystery, no rest for the eyes. The most beautiful spaces understand this dance, allowing light and shadow to define each other, to give each other meaning."
+    ],
+    closing: '"To design with light is to design with life."'
+  },
+
+  materiality: {
+    title: "On Materiality and Memory",
+    date: "March 2024",
+    icon: "📜",
+    body: [
+      "Materials remember. Wood remembers the tree it once was, the seasons it weathered, the hands that shaped it. Stone remembers the earth's pressure, the slow passage of time. These memories become part of our spaces, connecting us to something larger than ourselves.",
+      "The beauty of natural materials lies in their imperfection and their evolution. A wooden floor that develops a patina, a brass handle that darkens with touch, a plaster wall that shows the marks of its making—these aren't flaws to be avoided but stories to be celebrated.",
+      "Texture is how materials speak to us. Smooth surfaces feel controlled, refined. Rough textures feel honest, grounded. The interplay between different textures creates a tactile landscape that engages us beyond the visual, inviting touch, inviting presence.",
+      "When we choose materials that age gracefully, we're making a statement about time itself. We're saying that change is beautiful, that history has value, that the marks of living are worth preserving."
+    ],
+    closing: '"Every texture tells a story. Our job is to make sure it\'s one worth remembering."'
+  },
+
+  making: {
+    title: "The Beauty of Making",
+    date: "April 2024",
+    icon: "🔨",
+    body: [
+      "There's something profound about objects made by hand. They carry within them the attention, the care, the small decisions of their maker. In an age of mass production, this human touch becomes increasingly precious.",
+      "Craft isn't about perfection—it's about presence. It's about the maker being fully engaged with the material, responding to its nature, working with its grain rather than against it. This dialogue between maker and material results in objects that feel alive.",
+      "The process of making teaches patience and humility. Materials have their own wisdom, their own way of wanting to be shaped. The best craftspeople are those who listen, who allow the material to guide them as much as they guide it.",
+      "When we surround ourselves with handmade objects, we're surrounding ourselves with intention. Each piece becomes a reminder that things can be made with care, that quality matters, that the human touch has irreplaceable value."
+    ],
+    closing:
+      '"Craft isn\'t just about making things beautiful — it\'s about making things that mean something."'
+  },
+
+  homes: {
+    title: "Homes that Heal",
+    date: "May 2024",
+    icon: "🌤",
+    body: [
+      "A healing home doesn't announce itself. It doesn't demand attention or admiration. Instead, it quietly supports the life unfolding within it, adapting to needs, responding to moods, providing exactly what's needed in each moment.",
+      "Comfort in a home comes from predictability and surprise in equal measure. Predictability in the things that matter—where light falls, how spaces flow, where we can find rest. Surprise in the small delights—an unexpected view, a play of shadow, a moment of beauty discovered anew.",
+      "The rhythm of a home matters as much as its layout. There should be spaces for energy and spaces for calm, places for gathering and places for solitude. A good home choreographs these transitions, making it easy to shift between different modes of being.",
+      "Emotional connection to a home grows from the accumulation of small, positive experiences. The morning light in the kitchen. The way sound carries (or doesn’t) between rooms. The feeling of arriving home after a long day. These moments, repeated and refined, create a sense of belonging."
+    ],
+    closing:
+      '"A good home doesn\'t show off — it quietly supports the life unfolding within it."'
+  },
+
+  future: {
+    title: "The Future Feels Human Again",
+    date: "June 2024",
+    icon: "🌍",
+    body: [
+      "After decades of pursuing the new, the sleek, the technologically advanced, design is returning to something more fundamental: the human experience. We're remembering that spaces are for people, not for photographs.",
+      'Empathy-driven design asks different questions. Not "What looks impressive?" but "How does this feel?" Not "What\'s trending?" but "What do people actually need?" This shift from visual impact to experiential quality is quietly revolutionary.',
+      "Sensory minimalism isn't about having less—it's about being more intentional. It's about creating spaces that engage all the senses without overwhelming them. Soft textures, natural scents, gentle sounds, varied light—these elements work together to create environments that feel complete.",
+      "The future of design isn't about innovation for its own sake. It's about rediscovering timeless principles through a contemporary lens. It's about creating spaces that honor both our need for beauty and our need for comfort, both our desire for novelty and our longing for home."
+    ],
+    closing: '"The next big trend isn\'t style — it\'s sincerity."'
+  },
+
+  structure: {
+    title: "Learning from Structure",
+    date: "July 2024",
+    icon: "🪵",
+    body: [
+      "Structure is honest. It reveals how things stand, how forces flow, how elements support each other. When we expose structure rather than hide it, we're inviting people to understand the logic of a space, to see its bones.",
+      "Good proportion doesn't need to be explained—it's felt. A room with harmonious proportions simply feels right. The relationship between height and width, between solid and void, between mass and lightness—these ratios speak to something deep in our perception.",
+      "Joinery is where craft meets structure. The way pieces come together, the way connections are made—these details reveal the care and thought behind a design. Exposed joinery becomes a kind of ornament, celebrating the act of making rather than concealing it.",
+      "Learning from traditional building methods doesn't mean copying them. It means understanding the wisdom they contain—the way they respond to climate, the way they use local materials, the way they create beauty through necessity rather than decoration."
+    ],
+    closing:
+      '"True elegance lies in how things come together — simply, purposefully, and with ease."'
+  },
+
+  storytelling: {
+    title: "Visual Storytelling",
+    date: "August 2024",
+    icon: "💍",
+    body: [
+      "Every space tells a story, whether we intend it to or not. The question isn't whether we're telling a story, but whether we're telling the right one. Visual storytelling in design is about making that narrative intentional, coherent, and emotionally resonant.",
+      "Brand isn't just logos and color palettes—it's the feeling a space evokes, the values it embodies, the experience it promises. When physical space and brand identity align, the result is powerful. People don't just see the design; they feel the story.",
+      "Texture is a storytelling tool we often underuse. Rough textures speak of authenticity and craft. Smooth textures suggest refinement and care. The interplay between different textures creates narrative tension and resolution, guiding people through an emotional journey.",
+      "The best stories aren't told all at once. They unfold gradually, revealing themselves as you move through a space. A glimpse of something intriguing, a moment of surprise, a satisfying conclusion—these narrative beats make spaces memorable and meaningful."
+    ],
+    closing: '"The best stories aren\'t told in words; they\'re felt in space."'
+  }
+};
+
+/* -------------------- PROJECT DATA (FINAL CLEAN VERSION) -------------------- */
+
+const projectData = {
+  "samanvay": {
+    title: "Samanvay Wellness Retreat",
+    category: "Wellness & Retreats",
+    hero: "images/Samanway_lobby.png",
+    images: [
+      "images/samanvay/s1.png",
+      "images/samanvay/s2.png",
+      "images/samanvay/s3.png"
+    ],
+    concept:
+      "Samanvay, meaning 'harmony', is a wellness retreat designed to foster deep connection with nature and self. The design philosophy centers on calming the mind using natural materials, soft light, and mindful spatial flow.",
+    reflection:
+      "This project taught me the power of restraint. By limiting the material palette and embracing imperfection, we created a space where guests could disconnect from daily noise and reconnect with themselves."
+  },
+
+  "urban-nest": {
+    title: "Urban Nest Residence",
+    category: "Residential",
+    hero: "images/urbannesthero.jpg",
+    images: [
+      "images/urbannest-1.jpg",
+      "images/urbannest-2.jpg",
+      "images/urbannest-3jpg.jpg",
+      "images/urbannest-4jpg.jpg",
+      "images/urbannest-5.jpg"
+    ],
+    concept:
+      "Urban Nest is designed as a serene cocoon within the bustle of city life, blending soft geometries, earthy tones, and warm lighting to create a calming modern retreat. The seamless flow of materials, muted palettes, and gentle curves brings harmony to every space, making the home feel grounded yet contemporary—a place to unwind, recharge, and feel effortlessly at ease.",
+    reflection:
+      "While shaping Urban Nest, the focus was on creating balance—between city energy and home serenity, modern form and emotional comfort. Each space was curated to feel cohesive yet characterful, using lighting, texture, and subtle detailing as tools for warmth. The final result is a home that reflects intentional living: simple, soothing, and beautifully aligned with the rhythms of everyday life."
+  },
+
+  "artisan-cafe": {
+    title: "Ara Teahouse",
+    category: "Commercial & Events",
+    hero: "images/ara mezzenine.png",
+    images: [
+      "images/ARA- night view.png",
+      "images/ara.png",
+      "images/ara-lobby.png"
+    ],
+    concept:
+      "ARA Teahouse is envisioned as a sanctuary where the gentle ritual of brewing tea becomes a spatial experience. Inspired by the slow swirl, warmth, and grounding quality of tea, the design creates an environment that invites pause, reflection, and quiet connection. Natural materials—warm wood, lime-washed textures, soft fabrics, and muted earth tones—are layered to echo the organic journey of tea from leaf to cup. Light is treated as an emotional element: soft pools of warm illumination guide movement, while subtle highlights draw attention to textures and crafted details. Acoustic softness, intimate seating pockets, and airy transitions support a sense of calm in motion, allowing guests to flow effortlessly through the space. The design balances contemporary clarity with timeless comfort, shaping ARA Teahouse into a place where everyday moments are transformed into mindful, sensory experiences.",
+    reflection:
+      "Designing ARA Teahouse offered an opportunity to explore how ambience, materiality, and spatial rhythm can shape emotional comfort. The project reinforced the importance of grounding a hospitality space in a clear narrative—here, the ritual of tea became a guiding anchor that informed lighting, zoning, and sensory elements. While the conceptual direction successfully establishes a warm, mindful atmosphere, the process also revealed opportunities for deeper detailing, especially in material specification, joinery development, and operational layouts. Integrating branding and spatial experience proved valuable, highlighting how identity extends beyond visuals into mood, behavior, and interaction. Overall, the project balanced aesthetics with functionality, and the refinements made through reflection strengthen its potential as a build-able and culturally resonant space."
+  },
+
+  "textile-showcase": {
+    title: "Textile Heritage Showcase",
+    category: "Styling & Visual Merchandising",
+    hero: "images/textile-showcase/hero.png",
+    images: [
+      "images/textile-showcase/t1.png",
+      "images/textile-showcase/t2.png",
+      "images/textile-showcase/t3.png"
+    ],
+    concept:
+      "A curated showcase highlighting Indian weaving traditions using asymmetric layouts, dramatic lighting, and narrative-driven visual styling.",
+    reflection:
+      "This project deepened my appreciation for storytelling through styling. Each textile became both an artifact and a sensory experience."
+  },
+
+  "coastal-villa": {
+    title: "Coastal Villa",
+    category: "Residential",
+    hero: "images/coastal-villa/hero.png",
+    images: [
+      "images/coastal-villa/c1.png",
+      "images/coastal-villa/c2.png",
+      "images/coastal-villa/c3.png"
+    ],
+    concept:
+      "A beachfront villa designed to blend seamlessly with the coastal landscape — airy spaces, natural textures, and framed ocean views define the experience.",
+    reflection:
+      "The coastal climate required thoughtful material selection. We leaned into materials that age naturally, allowing the home to evolve beautifully over time."
+  },
+
+  "yoga-studio": {
+    title: "Tranquil Yoga Studio",
+    category: "Wellness & Retreats",
+    hero: "images/yoga-studio/hero.png",
+    images: [
+      "images/yoga-studio/y1.png",
+      "images/yoga-studio/y2.png",
+      "images/yoga-studio/y3.png"
+    ],
+    concept:
+      "A yoga sanctuary infused with soft light, breathable materials, and spatial stillness. Every detail supports both physical practice and inner reflection.",
+    reflection:
+      "Designing for movement and breath required studying light, acoustics, and energy flow. The result is a space that feels grounded and uplifting."
+  }
+};
+
+
+/* -------------------- PROJECT VIEW -------------------- */
+let currentProject = null;
+const projectKeys = Object.keys(projectData);
+
+function showProjectDetail(projectId) {
+  const project = projectData[projectId];
+
+  if (!project) {
+    console.error("❌ Project not found:", projectId);
+    return;
+  }
+
+  // Set text fields
+  document.getElementById("detail-title").textContent = project.title;
+  document.getElementById("detail-category").textContent = project.category;
+  document.getElementById("detail-concept").textContent = project.concept || "";
+  document.getElementById("detail-reflection").textContent = project.reflection || "";
+
+  // HERO IMAGE
+  document.getElementById("detail-hero").innerHTML = `
+    <img src="${project.hero}" 
+         alt="${project.title} Hero"
+         style="width:100%; height:100%; object-fit:cover; border-radius:4px;" />
+  `;
+
+  // GALLERY ---- SAFE BUILD ----
+  const gallery = document.getElementById("detail-gallery");
+  gallery.innerHTML = "";
+
+  if (project.images && project.images.length > 0) {
+    project.images.forEach(img => {
+      gallery.innerHTML += `
+        <div class="gallery-image">
+          <img src="${img}" 
+               alt="${project.title}"
+               style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+        </div>
+      `;
+    });
+  }
+
+  // Show the detail page
+  document.getElementById("project-detail").style.display = "block";
+
+  // Hide main content
+  document.getElementById("main-content").style.display = "none";
+}
+
+
+function hideProjectDetail() {
+  const detail = document.getElementById("project-detail");
+
+  // Hide detail page completely
+  detail.style.display = "none";      // ❗ REQUIRED
+  detail.classList.remove("active");
+
+  // Show main content again
+  document.getElementById("main-content").style.display = "block";
+
+  // Go back to top
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function showNextProject() {
+  const currentIndex = projectKeys.indexOf(currentProject);
+  const nextIndex = (currentIndex + 1) % projectKeys.length;
+  showProjectDetail(projectKeys[nextIndex]);
+}
+
+/* -------- Attach Click Listeners to Cards -------- */
+document
+  .querySelectorAll(".project-card, .portfolio-card")
+  .forEach((card) => {
+    card.addEventListener("click", () => {
+      const projectId = card.getAttribute("data-project");
+      showProjectDetail(projectId);
+    });
+  });
+
+document
+  .getElementById("back-to-portfolio")
+  .addEventListener("click", hideProjectDetail);
+
+document
+  .getElementById("next-project")
+  .addEventListener("click", showNextProject);
+
+/* -------------------- PORTFOLIO FILTERING -------------------- */
+const filterButtons = document.querySelectorAll(".filter-btn");
+const portfolioCards = document.querySelectorAll(".portfolio-card");
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.getAttribute("data-filter");
+
+    filterButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    portfolioCards.forEach((card) => {
+      if (filter === "all" || card.getAttribute("data-category") === filter) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+});
+
+/* ------------ JOURNAL SECTION (PROJECT-STYLE ORIENTATION) ------------ */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const journalSection = document.getElementById("journal");
+  const detailSection = document.getElementById("journal-detail");
+
+  const detailIcon = document.getElementById("journal-detail-icon");
+  const detailTitle = document.getElementById("journal-detail-title");
+  const detailDate = document.getElementById("journal-detail-date");
+  const detailBody = document.getElementById("journal-detail-body");
+  const detailClosing = document.getElementById("journal-detail-closing");
+
+  function openJournal(key) {
+    const data = journalData[key];
+    if (!data) return;
+
+    detailIcon.textContent = data.icon;
+    detailTitle.textContent = data.title;
+    detailDate.textContent = data.date;
+
+    detailBody.innerHTML = "";
+    data.body.forEach(para => {
+      const p = document.createElement("p");
+      p.textContent = para;
+      detailBody.appendChild(p);
+    });
+
+    detailClosing.textContent = data.closing;
+
+    journalSection.style.display = "none";
+    detailSection.style.display = "block";
+    detailSection.classList.add("active");
+
+    /* window.scrollTo({ top: 0, behavior: "smooth" }); */
+  }
+
+  function closeJournal() {
+    detailSection.classList.remove("active");
+    detailSection.style.display = "none";
+    journalSection.style.display = "block";
+  }
+
+  document.querySelectorAll(".journal-card").forEach(card => {
+    card.addEventListener("click", () => {
+      const key = card.getAttribute("data-article");
+      openJournal(key);
+    });
+  });
+
+  document.getElementById("close-journal-detail")
+    .addEventListener("click", closeJournal);
+
+});
+
+
+
+/* -------------------- CONTACT FORM (merged + fixed + working) -------------------- */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = form.name?.value ?? "";
+    const email = form.email?.value ?? "";
+    const message = form.message?.value ?? "";
+
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwAMnpT_iojkXRojZ1Va8obgEboYWrBwWeTjewGB6YxYYtKCOJ7zRRk93rfi145z2Rj/exec";
+
+    console.log("Submitting form to:", scriptURL, { name, email, message });
+
+    // Apps Script requires FormData + no-cors
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("message", message);
+
+    try {
+      await fetch(scriptURL, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors" // required for Google Apps Script
+      });
+
+      console.log("Fetch completed (no-cors mode prevents status visibility)");
+
+      // Success UI message
+      showFormMessage("Thank you for your message! I'll get back to you soon.", false);
+      form.reset();
+
+    } catch (error) {
+      console.error("Network / Fetch error:", error);
+      showFormMessage("Something went wrong. Try again. (network error)", true);
+    }
+  });
+
+});
+
+/* -------------------- Message UI Helper -------------------- */
+function showFormMessage(text, isError) {
+  const form = document.getElementById("contact-form");
+
+  // remove previous alert if exists
+  const existing = form.querySelector(".contact-msg");
+  if (existing) existing.remove();
+
+  const box = document.createElement("div");
+  box.className = "contact-msg";
+  box.style.cssText =
+    "margin-top:1rem;padding:1rem;border-radius:4px;text-align:center;font-family:Inter,sans-serif;";
+  box.style.background = isError ? "#ffdddd" : "#B28A5A";
+  box.style.color = isError ? "#800" : "#F7F5F2";
+  box.textContent = text;
+
+  form.appendChild(box);
+
+  // remove only success messages after 5 sec
+  if (!isError) {
+    setTimeout(() => box.remove(), 5000);
+  }
+}
+
+
+
+/* -------------------- NAV SMOOTH SCROLL -------------------- */
+document.querySelectorAll(".nav-link").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  });
+});
+
+/* -------------------- FADE-IN OBSERVER -------------------- */
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) entry.target.classList.add("fade-in");
+    });
+  },
+  { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+);
+
+document
+  .querySelectorAll(".project-card, .portfolio-card, .about-content")
+  .forEach((el) => observer.observe(el));
+</script>
+</body>
+</html>
+<!-- force rebuild -->
