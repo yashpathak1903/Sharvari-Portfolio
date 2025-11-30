@@ -3,6 +3,13 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-..."
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
   <title>Sharvari Joshi – Interior Designer &amp; Stylist</title>
   <meta name="description" content="Portfolio of Sharvari Joshi, an Interior Designer and Stylist from India specializing in residential, commercial, wellness, and styling projects.">
   <!-- <link rel="stylesheet" href="styles.css"> -->
@@ -874,6 +881,17 @@
       color: #B28A5A;
     }
 
+    .contact-links i {
+  font-size: 36px;   /* increase from 28px → 36px */
+  color: #444;
+  transition: 0.3s ease;
+}
+
+.contact-links i:hover {
+  color: #000;
+  transform: scale(1.25);
+}
+
     /* Footer */
     footer {
       padding: 3rem 4rem;
@@ -1254,9 +1272,34 @@
       <div class="form-group"><label for="message">Message</label> <textarea id="message" name="message" required></textarea>
       </div><button type="submit" class="submit-btn">Send Message</button>
      </form>
-     <div class="contact-links"><a href="mailto:noctiscreates@gmail.com" id="email-link" target="_blank" rel="noopener noreferrer">Email</a> <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer">Behance</a> <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-     </div>
-    </div>
+<div class="contact-links">
+
+  <!-- Email -->
+  <a href="mailto:noctiscreates@gmail.com" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="contact-icon">
+    <i class="fa-regular fa-envelope"></i>
+  </a>
+
+  <!-- Behance -->
+  <a href="https://www.behance.net/sharvarijoshi4" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="contact-icon">
+    <i class="fa-brands fa-behance"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="contact-icon">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+</div>
+
    </section>
   </div><!-- Project Detail Page (Hidden by default) -->
 <div id="project-detail" class="project-detail">
